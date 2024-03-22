@@ -82,17 +82,21 @@ const CodeBlock = ({ className = 'not-prose ', inline = false, children }: CodeB
       <div>
         <div className="flex justify-end">
           <CopyToClipboard text={children}>
-            <button
-              type="button"
-              className="mb-1 inline-flex items-center rounded-t-lg bg-gray-600 px-2.5 py-1 text-center text-sm font-medium text-white hover:bg-gray-700
+            {
+              (
+                <button
+                  type="button"
+                  className="mb-1 inline-flex items-center rounded-t-lg bg-gray-600 px-2.5 py-1 text-center text-sm font-medium text-white hover:bg-gray-700
              lg:-mb-12 lg:mr-2"
-              onClick={() => {
-                changeText('Copied!');
-              }}
-            >
-              <ClipboardIcon className="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
-              {copyButtonText}
-            </button>
+                  onClick={() => {
+                    changeText('Copied!');
+                  }}
+                >
+                  <ClipboardIcon className="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
+                  {copyButtonText}
+                </button>
+              ) as any
+            }
           </CopyToClipboard>
         </div>
 
