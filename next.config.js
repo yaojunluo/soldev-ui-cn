@@ -1,22 +1,22 @@
-const { withPlausibleProxy } = require("next-plausible");
+const { withPlausibleProxy } = require('next-plausible');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withPlausibleProxy()({
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
+        protocol: 'https',
+        hostname: '**'
+      }
+    ]
   },
   i18n: {
-    locales: ['en', 'es'],
-    defaultLocale: 'en',
+    locales: ['en', 'es', 'zh'],
+    defaultLocale: 'zh'
   },
   experimental: {
     workerThreads: false,

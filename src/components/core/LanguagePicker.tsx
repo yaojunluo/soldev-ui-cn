@@ -12,6 +12,10 @@ const LOCALES = {
   es: {
     title: 'Spanish',
     icon: '🇪🇸'
+  },
+  zh: {
+    title: '中文',
+    icon: '🇨🇳'
   }
 };
 
@@ -55,6 +59,7 @@ export default function LanguagePicker() {
           <div>
             <LocaleItem locale="en" />
             <LocaleItem locale="es" />
+            <LocaleItem locale="zh" />
           </div>
         </Menu.Items>
       </Transition>

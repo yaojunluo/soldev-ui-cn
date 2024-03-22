@@ -2,7 +2,7 @@
 
 The UI used to display the Solana Course at https://soldev.app
 
-Note the main [Solana Course repo](https://github.com/Unboxed-Software/solana-course) now has a smaller version of this UI included, so this repo isn't necessary for local development or production deployment on other domains.
+Note the main [Solana Course repo](https://github.com/numb-wallet/solana-course) now has a smaller version of this UI included, so this repo isn't necessary for local development or production deployment on other domains.
 
 ## :hammer_and_wrench: Installation Steps
 

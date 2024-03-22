@@ -1,4 +1,4 @@
-// Should match https://github.com/Unboxed-Software/solana-course/blob/main/src/lib/types.ts
+// Should match https://github.com/numb-wallet/solana-course/blob/main/src/lib/types.ts
 
 export type CourseStructure = {
   tracks: Array<Track>;

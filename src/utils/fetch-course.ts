@@ -4,7 +4,7 @@ import { get } from 'fetch-unfucked';
 const BRANCH: 'main' | 'draft' = 'main';
 
 export const fetchLessonText = async (slug: string, locale?: string): Promise<string> => {
-  const url = `https://raw.githubusercontent.com/Unboxed-Software/solana-course/${BRANCH}/content${
+  const url = `https://raw.githubusercontent.com/numb-wallet/solana-course/${BRANCH}/content${
     locale && locale != 'en' ? '/' + locale : ''
   }/${slug}.md`;
   const response = await get(url, null, 'text/plain');
@@ -17,7 +17,7 @@ export const fetchLessonText = async (slug: string, locale?: string): Promise<st
 };
 
 export const fetchCourseStructure: () => Promise<CourseStructure> = async () => {
-  const url = `https://raw.githubusercontent.com/Unboxed-Software/solana-course/${BRANCH}/course-structure.json`;
+  const url = `https://raw.githubusercontent.com/numb-wallet/solana-course/${BRANCH}/course-structure.json`;
   const response = await get(url, null, 'application/json');
 
   if (response.status !== 'OK') {
@@ -30,7 +30,8 @@ export const fetchCourseStructure: () => Promise<CourseStructure> = async () => 
 export const fetchCourseTranslations: (locale?: string) => Promise<Translations> = async (
   locale = 'en'
 ) => {
-  const url = `https://raw.githubusercontent.com/Unboxed-Software/solana-course/${BRANCH}/translations/${locale}/titles.json`;
+  console.log('fetchCourseTranslations', locale);
+  const url = `https://raw.githubusercontent.com/numb-wallet/solana-course/${BRANCH}/translations/${locale}/titles.json`;
   const response = await get(url, null, 'application/json');
 
   const { body } = response;
@@ -39,7 +40,7 @@ export const fetchCourseTranslations: (locale?: string) => Promise<Translations>
 };
 
 export const fetchMessages: (locale?: string) => Promise<Translations> = async (locale = 'en') => {
-  const url = `https://raw.githubusercontent.com/Unboxed-Software/solana-course/${BRANCH}/translations/${locale}/messages.json`;
+  const url = `https://raw.githubusercontent.com/numb-wallet/solana-course/${BRANCH}/translations/${locale}/messages.json`;
   const response = await get(url, null, 'application/json');
 
   const { body } = response;

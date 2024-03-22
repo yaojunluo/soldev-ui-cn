@@ -60,7 +60,7 @@ export default function Page({ CourseStructure: CourseStructure, courseTranslati
           and{' '}
           <Link
             className="underline"
-            href="https://github.com/Unboxed-Software/solana-course/graphs/contributors?type=a"
+            href="https://github.com/numb-wallet/solana-course/graphs/contributors?type=a"
             target="_blank"
             rel="noreferrer"
           >
